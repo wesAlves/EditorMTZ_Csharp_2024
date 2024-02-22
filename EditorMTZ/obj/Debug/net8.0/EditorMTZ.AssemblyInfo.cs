@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EditorMTZ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3e233e43779462eaf56a12fe40dea70db4ac2a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("EditorMTZ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EditorMTZ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
