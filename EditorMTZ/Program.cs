@@ -1,23 +1,13 @@
-
-using EditorMTZ.weather;
+using EditorMTZ.TodoDBContext;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+
 var app = builder.Build();
 
-var sumaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+app.MapControllers();
 
-app.MapGet("/", (HttpContext context) =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-    {
-        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-        TemperatureC = Random.Shared.Next(-20, 35),
-        Summary = sumaries[Random.Shared.Next(sumaries.Length)]
-    }).ToArray();
-
-    return forecast;
-});
 app.Run();
