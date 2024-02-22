@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorMTZApi", "EditorMTZAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoItems", "TodoItems\TodoItems.csproj", "{803D7D56-E392-418B-BCD1-1879EE0E1E90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningLibrary", "LearningLibrary\LearningLibrary.csproj", "{9836EAA7-9AC8-43EF-A9AA-A9CE9ADA0E01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{803D7D56-E392-418B-BCD1-1879EE0E1E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{803D7D56-E392-418B-BCD1-1879EE0E1E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{803D7D56-E392-418B-BCD1-1879EE0E1E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9836EAA7-9AC8-43EF-A9AA-A9CE9ADA0E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9836EAA7-9AC8-43EF-A9AA-A9CE9ADA0E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9836EAA7-9AC8-43EF-A9AA-A9CE9ADA0E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9836EAA7-9AC8-43EF-A9AA-A9CE9ADA0E01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
