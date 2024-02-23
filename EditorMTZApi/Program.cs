@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<TodoDBContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+// builder.Services.AddDbContext<TodoDBContext>(opt => opt.UseInMemoryDatabase("TodoList"));
 builder.Services.AddDbContext<LearningLibraryDbContext>(opt => opt.UseInMemoryDatabase("LearningLibrary"));
 
 var app = builder.Build();
