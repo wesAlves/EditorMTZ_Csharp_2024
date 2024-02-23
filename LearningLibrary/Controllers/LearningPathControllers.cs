@@ -67,4 +67,20 @@ public class LearningPathController : ControllerBase
 
         return CreatedAtAction(nameof(GetLearningPath), new { id = learningPath.Id }, learningPath);
     }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteLearningPath(Guid id)
+    {
+        var learningPath = await _context.LearningPaths.FindAsync(id);
+
+        if (learningPath == null)
+        {
+            return NotFound();
+        }
+
+        _context.LearningPaths.Remove(learningPath);
+        await _context.SaveChangesAsync();
+        
+        return NoContent();
+    }
 }
