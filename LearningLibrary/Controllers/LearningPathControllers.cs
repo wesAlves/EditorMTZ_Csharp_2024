@@ -22,7 +22,7 @@ public class LearningPathController : ControllerBase
         return await _context.LearningPaths.ToListAsync();
     }
 
-    [HttpGet("id")]
+    [HttpGet("{id}")]
     public async Task<ActionResult<LearningPath>> GetLearningPath(Guid id)
     {
         var learningPath = await _context.LearningPaths.FindAsync(id);
@@ -33,5 +33,38 @@ public class LearningPathController : ControllerBase
         }
 
         return learningPath;
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult> PutLearningPath(Guid id, LearningPath learningPath)
+    {
+        if (id != learningPath.Id)
+        {
+            return BadRequest();
+        }
+
+        _context.Entry(learningPath).State = EntityState.Modified;
+
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception e)
+        {
+            //NotImplementedException
+            Console.WriteLine(e);
+            throw;
+        }
+
+        return NoContent();
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> PostLearningPath(LearningPath learningPath)
+    {
+        _context.LearningPaths.Add(learningPath);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(GetLearningPath), new { id = learningPath.Id }, learningPath);
     }
 }
