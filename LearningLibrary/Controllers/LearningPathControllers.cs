@@ -49,7 +49,7 @@ public class LearningPathController : ControllerBase
         {
             await _context.SaveChangesAsync();
         }
-        catch (Exception e)
+        catch (DbUpdateConcurrencyException e)
         {
             //NotImplementedException
             Console.WriteLine(e);
