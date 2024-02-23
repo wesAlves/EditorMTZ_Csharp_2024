@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EditorMTZApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c6d031a4f433d2f903f37a2c1668dcb6044c0ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae006ddd1c519f6fa503f65ad122f0105dc7856f")]
 [assembly: System.Reflection.AssemblyProductAttribute("EditorMTZApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EditorMTZApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

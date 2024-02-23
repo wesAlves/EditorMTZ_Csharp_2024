@@ -34,7 +34,7 @@ public class LearningObjectController : ControllerBase
         return learningObject;
     }
 
-    [HttpPut]
+    [HttpPut("{id}")]
     public async Task<ActionResult<LearningObject>> PutLearningObject(Guid id, LearningObject learningObject)
     {
         if (id != learningObject.Id)
@@ -55,6 +55,31 @@ public class LearningObjectController : ControllerBase
             throw;
         }
 
+        return NoContent();
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<LearningObject>> PostLearningObject(LearningObject learningObject)
+    {
+        _context.LearningObjects.Add(learningObject);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(GetLearningObject), new { id = learningObject.Id }, learningObject);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteLearingObject(Guid id)
+    {
+        var learingObject = await _context.LearningObjects.FindAsync(id);
+
+        if (learingObject == null)
+        {
+            return NotFound();
+        }
+
+        _context.LearningObjects.Remove(learingObject);
+        _context.SaveChangesAsync();
+        
         return NoContent();
     }
 }
