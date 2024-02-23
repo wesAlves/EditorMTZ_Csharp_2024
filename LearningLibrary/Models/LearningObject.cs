@@ -1,6 +1,6 @@
 namespace LearningLibrary.Models;
 
-public class LearningPath
+public class LearningObject
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
